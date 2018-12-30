@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>BCQS</title>
+    <script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+    <script src="./user.js"></script>
+</head>
+<body>
+<div id = "headPicture">
+    <div id = "title">Block Chain Quiz System</div>
+    <br>
+    <a href="index.html" id = "back">back</a>
+    <button id="help" onclick="App.help()">help</button>
+    <button id="withdraw" onclick="App.withdraw()">withdraw</button>
+
+</div>
+<div id = "team0">
+    <p class = "p_info">Home Team</p>
+    <p id = "main_team">Please Wait</p>
+</div>
+
+<div id = "vs">
+    <p id = "vs_p">VS(id)</p>
+</div>
+
+<div id = "team1">
+    <p class = "p_info">Guest Team</p>
+    <p id = "next_team">Please Wait</p>
+</div>
+
+<div id = "input1">
+    <form id="choose">
+        <input type="radio" name="result" id="win" class="for" style= "zoom:250%" value="win" checked><label class="select">赢</label>
+        <input type="radio" name="result" id="flat" class="for" style= "zoom:250%" value="flat"><label class="select">平</label>
+        <input type="radio" name="result" id="lose" class="for" style= "zoom:250% " value="select"><label class="select">负</label>
+    </form>
+    <br><label for="amount">金额:</label><input type="text" id="amount" placeholder="e.g., 95"/><br>
+    <br><br><button id="submit" onclick="App.handle()">提交</button> <button id="cancel" onclick="App.clear()">清空</button>
+
+</div>
+<div id="result">Note!</div>
+
+</body>
+</html>

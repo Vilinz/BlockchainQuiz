@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>BCQS</title>
+    <script src="./manager.js"></script>
+    <script src="//apps.bdimg.com/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script src="//apps.bdimg.com/libs/jqueryui/1.10.4/jquery-ui.min.js"></script>
+    <link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.0/css/bootstrap.min.css">
+    <!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
+    <script src="http://cdn.bootcss.com/jquery/1.11.1/jquery.min.js"></script>
+    <!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+    <script src="http://cdn.bootcss.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="//apps.bdimg.com/libs/jqueryui/1.10.4/css/jquery-ui.min.css">
+</head>
+<body>
+    <div id = "headPicture">
+        <div id = "title">Block Chain Quiz System</div>
+        <br>
+        <button id="m_help" onclick="App.help()" class="btn btn-info">help</button>
+        <button id="m_back" onclick="App.back()" class="btn btn-info">back</button>
+    </div>
+
+    <div id = "current_state">
+        <div id = "m_team0">
+            <p class = "m_p_info">Home Team</p>
+            <p id = "m_main_team">Please Wait</p>
+        </div>
+
+        <div id = "m_vs">
+            <p id = "m_vs_p">VS</p>
+        </div>
+
+        <div id = "m_team1">
+            <p class = "m_p_info">Guest Team</p>
+            <p id = "m_next_team">Please Wait</p>
+        </div>
+        <div id = "state">
+            <h3 id = "game_id"></h3>
+            <h3 id = "current"></h3>
+        </div>
+    </div>
+    <div id = "manage">
+        <br>
+        <div class = "l1"><span>Reset the quiz information and start another game.</span><button id="m_reset" onclick="App.reset()" class="bu btn btn-info">Reset</button><br></div>
+        <div class = "l1"><span>Set game information(Home team and Guest team).</span><button id="m_set" class="bu btn btn-info" onclick="App.showMinLogin()">Setting</button><br></div>
+        <div class = "l1"><span>Start the quiz.</span><button id="m_begin" onclick="App.begin()" class="bu btn btn-info">Start</button><br></div>
+        <div class = "l1"><span>Close the quiz.</span><button id="m_close" onclick="App.close()" class="bu btn btn-info">Close</button><br></div>
+        <div class = "l1"><span>Query the result from the database</span><button id="m_result" onclick="App.query()" class="bu btn btn-info">Query</button><br></div>
+        <div class = "l1"><span>Cancel the quiz and refund to users.</span><button id="m_cancle" onclick="App.cancle()" class="bu btn btn-info">Cancel</button><br></div>
+    </div>
+    <div class="mini_login" id="mini_login">
+        <!-- 表单 -->
+        <form action="" method="post">
+            <div class="item firstLine" id="firstLine" onmousedown="App.moveLogin()">
+                <span class="login_title">Please enter the information.</span>
+                <a class="login_close" id="close_minilogin" onclick="App.closeLogin()">X</a>
+            </div>
+            <div class="item">
+                <label>Home</label>
+                <input type="text" name="uname" id="info_main"/>
+            </div>
+            <div class="item">
+                <label>Guest</label>
+                <input type="text" name="upwd" id="info_next"/>
+            </div>
+            <div class="item">
+                <a href="javascript:void(0)" class="btn_login" onclick="App.get_info_and_close()">OK</a>
+            </div>
+        </form>
+    </div>
+    <div class="cover"></div>
+</body>
+</html>
