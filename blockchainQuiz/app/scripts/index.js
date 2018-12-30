@@ -6,11 +6,7 @@ import { default as Web3 } from 'web3'
 import { default as contract } from 'truffle-contract'
 
 // Import our contract artifacts and turn them into usable abstractions.
-// import metaCoinArtifact from '../../build/contracts/MetaCoin.json'
 import gameCoinArtfact from '../../build/contracts/Game.json'
-
-// MetaCoin is our usable abstraction, which we'll use through the code below.
-// const MetaCoin = contract(metaCoinArtifact)
 const Game = contract(gameCoinArtfact)
 
 // The following code is simple to show off interacting with your contracts.
@@ -89,6 +85,5 @@ window.addEventListener('load', function () {
     // fallback - use your fallback strategy (local node / hosted node + in-dapp id mgmt / fail)
     window.web3 = new Web3(new Web3.providers.HttpProvider('http://127.0.0.1:8545'))
   }
-
   App.start()
 })
