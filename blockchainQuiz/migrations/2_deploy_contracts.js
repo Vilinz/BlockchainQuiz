@@ -1,7 +1,5 @@
-var ConvertLib = artifacts.require('./ConvertLib.sol')
-var MetaCoin = artifacts.require('./MetaCoin.sol')
+var Data = artifacts.require('./MyDataBase.sol')
+
 module.exports = function (deployer) {
-  deployer.deploy(ConvertLib)
-  deployer.link(ConvertLib, MetaCoin)
-  deployer.deploy(MetaCoin)
+  deployer.deploy(Data, "0xC2e9C45883B29c00ba3490568941e4FD027C9a4a")
 }
