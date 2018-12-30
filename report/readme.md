@@ -17,11 +17,68 @@
 
 ![](https://github.com/Vilinz/BlockchainQuiz/blob/master/report/pictures/frame.jpg)
 
-
+说明：第一个为主界面，另外三个是针对不同角色的页面，不同角色在页面中所具有的权限也不一样。
 
 ## 实验过程
 
+- 工具
+
+  软件：WebStorm
+
+  语言：javascript，jquery，html，css，solidity
+
+  其他工具及其版本
+
+  - nodejs：v9.2.0
+  - Truffle：v5.0.0
+  - 其他如python，node-gyp，scripts等等
+
+- 实验所用的框架
+
+  - truffle
+
+    Truffle是针对基于以太坊的Solidity语言的一套开发框架。本身基于Javascript。
+
+    - 首先对客户端做了深度集成。开发，测试，部署一行命令都可以搞定。不用再记那么多环境地址，繁重的配置更改，及记住诸多的命令。
+    - 它提供了一套类似`maven`或`gradle`这样的项目构建机制，能自动生成相关目录，默认是基于Web的。当前这个打包机制是自定义的，比较简陋，不与当前流行打包方案兼容。但自已称会弃用，与主流兼容，好在它也支持自定义打包流程。
+    - 提供了合约抽象接口，可以直接通过`var meta = MetaCoin.deployed();`拿到合约对象后，在`Javascript`中直接操作对应的合约函数。原理是使用了基于`web3.js`封装的`Ether Pudding`工具包。简化开发流程。
+    - 提供了控制台，使用框架构建后，可以直接在命令行调用输出结果，可极大方便开发调试。
+    - 提供了监控合约，配置变化的自动发布，部署流程。不用每个修改后都重走整个流程。
+
+    参考：
+
+    [truffle](http://truffle.tryblockchain.org/)
+
+    [truffle](https://truffleframework.org/docs/getting_started/installation)
+
+- 实验过程
+
+
 ## 实验结果
+
+- 主页面
+
+  ![](https://github.com/Vilinz/BlockchainQuiz/blob/master/report/pictures/index.png)
+
+  主界面对应着三个按钮，分别进入三个不同的页面。
+
+- 竞猜参与者
+
+  ![](https://github.com/Vilinz/BlockchainQuiz/blob/master/report/pictures/user.jpg)
+
+  这个页面是用户进行投注的页面。
+
+- 合约管理者
+
+  ![](https://github.com/Vilinz/BlockchainQuiz/blob/master/report/pictures/set_end.jpg)
+
+  这个是合约管理者才能进入的页面。
+
+- 数据库
+
+  ![](https://github.com/Vilinz/BlockchainQuiz/blob/master/report/pictures/database.jpg)
+
+  这个页面提供了数据库的插入，修改和查询功能。
 
 ## 使用说明
 
